@@ -13,6 +13,8 @@ import UIKit
 protocol OverviewViewProtocol: class {
     var viewModel: OverviewViewModelProtocol?  { get set }
     var coordinator: OverviewCoordinatorProtocol? { get set }
+    func presentDetailDialog()
+
 }
 
 //MARK: VIEWMODEL -
@@ -20,10 +22,15 @@ protocol OverviewViewModelProtocol: class {
     var view: OverviewViewProtocol?  { get set }
     func fetchCities()
     func returnAllCountires() -> [CountryModel]
+    func selectedForecast() -> [List]
+    func requestLocationAccess()
+
 }
 
 //MARK: Coordinator -
 protocol OverviewCoordinatorProtocol: class {
     var view: UIViewController! { get set }
-    func navigateToSearch(countries: [CountryModel]) 
+    func navigateToSearch(countries: [CountryModel])
+    func presentDialogDetail(forecast:[List])
+
 }

@@ -7,13 +7,24 @@
 //
 
 import Foundation
+import CoreLocation
 
 
-class OverViewModel: OverviewViewModelProtocol {
+class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelegate{
     
     
     var view: OverviewViewProtocol?
     var countries = [CountryModel]()
+    private var service:WeatherSerivce?
+    private var selectedCountryForeCast  = [List]()
+    private  var locManager = CLLocationManager()
+    
+    
+    override init() {
+        super.init()
+        service = WeatherSerivce(delegate: self)
+        
+    }
     
     func fetchCities() {
         let bundle = Bundle(for: type(of: self))
@@ -35,6 +46,60 @@ class OverViewModel: OverviewViewModelProtocol {
     
     func returnAllCountires() -> [CountryModel] {
         return countries
+    }
+    
+    func selectedForecast() -> [List] {
+        return selectedCountryForeCast
+    }
+    
+    func requestLocationAccess() {
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        locManager.startUpdatingLocation()
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+            locManager = CLLocationManager()
+            guard let currentLocation = locManager.location else {
+                self.service?.searchWeather(with: "London")
+                return
+            }
+            let geoCoder = CLGeocoder()
+            
+            geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: { (placemarks, error) -> Void in
+                // Place details
+                var placeMark: CLPlacemark!
+                placeMark = placemarks?[0]
+                // Country
+                if let country = placeMark.addressDictionary!["Country"] as? NSString {
+                    self.service?.searchWeather(with: String(country))
+                } else {
+                    self.service?.searchWeather(with: "London")
+                }
+            })
+        }
+    }
+    
+}
+
+extension OverViewModel:WeatherSerivceDelegate{
+    
+    func forecastLoade(with list: [List]) {
+        self.selectedCountryForeCast.removeAll()
+        for index in stride(from: 0, through: list.count - 2, by: 1) {
+            if list[index].date!.calculateDiffInDays(date: list[index+1].date!) !=  0 {
+                self.selectedCountryForeCast.append(list[index])
+            }
+        }
+        view?.presentDetailDialog()
+    }
+    
+    func invalidCityName() {
+        
+    }
+    
+    func somethingWentWrong(with message: String) {
+        
     }
     
 }
