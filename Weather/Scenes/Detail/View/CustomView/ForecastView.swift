@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ForecastView: UIView {
 
     @IBOutlet weak var weatherImageView: UIImageView!
@@ -17,6 +17,14 @@ class ForecastView: UIView {
     func setDetails(date:String ,weather:Weather)  {
         labelDate.text = date
         labelWeather.text = weather.description!
+        //10d@2x.png
+        if let icon = weather.icon {
+            let urlStr = AppTargetConstant.baseImageUrl + icon + "@2x.png"
+            guard let url = URL(string: urlStr) else {
+                return
+            }
+            weatherImageView.sd_setImage(with: url, completed: nil)
+        }
     }
     
 }

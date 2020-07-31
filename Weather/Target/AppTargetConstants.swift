@@ -13,10 +13,6 @@ enum AppTargetConstant {
     
     enum EndPoint {
         static let forecast = "forecast"
-        static let wallet = "customer/wallet"
-        static let verifyCustomerNumberAmount = "business/issue/verify-customer-number"
-        static let setCustomerNumberAmount = "business/issue/amount"
-        static let updateProfile = "auth/profile"
     }
     
     enum Parameters {
@@ -35,5 +31,5 @@ enum AppTargetConstant {
     }
     
     static let baseUrl  = "https://api.openweathermap.org/data/2.5/"
-    
+    static let baseImageUrl = "http://openweathermap.org/img/wn/"
 }

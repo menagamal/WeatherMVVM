@@ -8,12 +8,22 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
-
+class DetailsViewController: UIViewController ,DetailViewProtocol{
+    
     @IBOutlet weak var forecastStackView: UIStackView!
+    
+    var viewModel: DetailViewModelProtocol?
+    
+    var coordinator: DetailCoordinatorProtocol?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let views  = viewModel!.loadForeCast()
+        for view in views {
+            self.forecastStackView.addArrangedSubview(view)
+        }
+        
     }
 
 }

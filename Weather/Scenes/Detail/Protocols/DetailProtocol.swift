@@ -19,7 +19,7 @@ protocol DetailViewProtocol: class {
 //MARK: VIEWMODEL -
 protocol DetailViewModelProtocol: class {
     var view: DetailViewProtocol?  { get set }
-
+    func loadForeCast() -> [ForecastView]
 }
 
 //MARK: Coordinator -

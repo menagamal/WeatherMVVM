@@ -43,11 +43,13 @@ extension SearchViewModel:SearchCellDataSourceDelegate{
 extension SearchViewModel:WeatherSerivceDelegate{
     
     func forecastLoade(with list: [List]) {
+        self.selectedCountryForeCast.removeAll()
         for index in stride(from: 0, through: list.count - 2, by: 1) {
             if list[index].date!.calculateDiffInDays(date: list[index+1].date!) !=  0 {
                 self.selectedCountryForeCast.append(list[index])
             }
         }
+        view?.presentDetailDialog()
     }
     
     func invalidCityName() {
