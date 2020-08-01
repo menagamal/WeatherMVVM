@@ -16,26 +16,31 @@ protocol OverviewViewProtocol: class {
     var coordinator: OverviewCoordinatorProtocol? { get set }
     func presentDetailDialog()
     func showError(with message: String)
-
+    
 }
 
 //MARK: VIEWMODEL -
 protocol OverviewViewModelProtocol: class {
+    var countries :[CountryModel] { get set }
     var view: OverviewViewProtocol?  { get set }
     var countryName:String {get set }
-    func fetchCities()
+    func fetchCities() -> Bool // TEST
     func returnAllCountires() -> [CountryModel]
     func selectedForecast() -> [ListStruct]
     func selectedForecastModel() -> ForecastModel?
     func requestLocationAccess()
     func loadAllCountries()
 }
-
+protocol OverviewViewModelConstructProtocol: class {
+    func constructForecastModel(forecast:[ListStruct])  -> ForecastModel
+    func constructCountryModels(objects:[ForecastModel],allcountries:[CountryModel]) -> [CountryModel]
+    func constructCountryModels(countryName:String,allcountries:[CountryModel]) -> [CountryModel]
+}
 //MARK: Coordinator -
 protocol OverviewCoordinatorProtocol: class {
     var view: UIViewController! { get set }
     func navigateToSearch(countries: [CountryModel])
     func presentDialogDetail(forecast: [ListStruct],name:String)
     func presentDialogDetail(forecast: ForecastModel,name:String)
-
+    
 }

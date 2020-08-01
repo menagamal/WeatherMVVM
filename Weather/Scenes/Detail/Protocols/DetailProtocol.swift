@@ -21,9 +21,9 @@ protocol DetailViewProtocol: class {
 //MARK: VIEWMODEL -
 protocol DetailViewModelProtocol: class {
     var view: DetailViewProtocol?  { get set }
-    func loadForeCast() -> [ForecastView]
-    func buttonTitle() -> String
-    func toggleFav()  
+    func loadForeCast() -> [ForecastView]  // TEST
+    func buttonTitle() -> String  // TEST
+    func toggleFav()   // TEST
 }
 
 //MARK: Coordinator -

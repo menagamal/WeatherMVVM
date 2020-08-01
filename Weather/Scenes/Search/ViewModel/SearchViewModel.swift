@@ -14,7 +14,7 @@ class SearchViewModel: SearchViewModelProtocol {
     private var countries =  [CountryModel]()
     private var dataSource:SearchCellDataSource?
     private var service:WeatherSerivce?
-    private var selectedCountryForeCast  = [ListStruct]()
+    private var selectedCountryForeCast = [ListStruct]()
     var countryName: String = ""
     
     init(countries:[CountryModel]) {

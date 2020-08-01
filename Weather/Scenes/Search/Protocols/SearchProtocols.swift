@@ -24,7 +24,7 @@ protocol SearchViewModelProtocol: class {
     func searchCities(with city:String)
     func loadAllCountries()
     func searchButtonClicked(str:String)
-    func selectedForecast() -> [ListStruct]
+    func selectedForecast() -> [ListStruct] 
     var countryName:String {get set }
 }
 

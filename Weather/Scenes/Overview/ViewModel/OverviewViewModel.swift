@@ -12,6 +12,7 @@ import CoreLocation
 
 class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelegate{
     
+    
     private var dataSource:SearchCellDataSource?
     private var service:WeatherSerivce?
     private var selectedCountryForeCast  = [ListStruct]()
@@ -29,10 +30,10 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
         service = WeatherSerivce(delegate: self)
     }
     
-    func fetchCities() {
+    func fetchCities() -> Bool {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "cityList", withExtension: "json") else {
-            return
+            return false
         }
         do {
             let json = try Data(contentsOf: url)
@@ -40,11 +41,13 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
                 let responseModel: [CountryModel] = try JSONDecoder().decode([CountryModel].self, from: json)
                 countries  = responseModel
             } catch {
-                
+                return false
             }
         } catch {
-            
+            return false
         }
+        
+        return true
     }
     
     func requestLocationAccess() {
@@ -67,13 +70,19 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
                 var placeMark: CLPlacemark!
                 placeMark = placemarks?[0]
                 // Country
-                if let country = placeMark.addressDictionary!["Country"] as? NSString {
-                    self.countryName = String(country)
-                    self.service?.searchWeather(with: String(country))
+                if let placeMark = placeMark {
+                    if let country = placeMark.addressDictionary!["Country"] as? NSString {
+                        self.countryName = String(country)
+                        self.service?.searchWeather(with: String(country))
+                    } else {
+                        self.countryName = "London"
+                        self.service?.searchWeather(with: "London")
+                    }
                 } else {
                     self.countryName = "London"
                     self.service?.searchWeather(with: "London")
                 }
+                
             })
         }
     }
@@ -121,8 +130,8 @@ extension OverViewModel:SearchCellDataSourceDelegate{
 }
 
 //  MARK: Construct Helper Functions
-extension OverViewModel {
-    private func constructForecastModel(forecast:[ListStruct])  -> ForecastModel{
+extension OverViewModel :OverviewViewModelConstructProtocol{
+    internal func constructForecastModel(forecast:[ListStruct])  -> ForecastModel{
         var weathers = [Weather]()
         var dates = [Date]()
         for item in forecast {
@@ -136,7 +145,7 @@ extension OverViewModel {
         return ForecastModel(id: countryName, name: countryName, forecast: weathers,dates: dates)
     }
     
-    private func constructCountryModels(objects:[ForecastModel],allcountries:[CountryModel]) -> [CountryModel]{
+    internal func constructCountryModels(objects:[ForecastModel],allcountries:[CountryModel]) -> [CountryModel]{
         var models = [CountryModel]()
         for item in objects {
             let filtered = allcountries.filter({ $0.name! == item.name!})
@@ -146,7 +155,7 @@ extension OverViewModel {
         }
         return models
     }
-    private func constructCountryModels(countryName:String,allcountries:[CountryModel]) -> [CountryModel]{
+    internal func constructCountryModels(countryName:String,allcountries:[CountryModel]) -> [CountryModel]{
         var models = [CountryModel]()
         
         let filtered = allcountries.filter({ $0.name! == countryName})

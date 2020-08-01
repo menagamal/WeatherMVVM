@@ -11,7 +11,97 @@
 		99AF5F212D8D765329AC4A58 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F540E95D6D199E17A4E7EC /* Pods_Weather.framework */; };
 		D036CA6E24D574D2004E2B7D /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA6D24D574D2004E2B7D /* CacheHandler.swift */; };
 		D036CA7424D5930C004E2B7D /* NotificationCenterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */; };
-		D036CA7724D594D4004E2B7D /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7624D594D4004E2B7D /* AlertHandler.swift */; };
+		D036CA7924D61530004E2B7D /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7824D61530004E2B7D /* Overview.swift */; };
+		D036CA7A24D619F7004E2B7D /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D9A24D42AE800C08AD3 /* OverviewViewModel.swift */; };
+		D036CA7B24D61A16004E2B7D /* NotificationCenterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */; };
+		D036CA7C24D61A19004E2B7D /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA6D24D574D2004E2B7D /* CacheHandler.swift */; };
+		D036CA7D24D61A1E004E2B7D /* WeatherSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99E24D487A300B9CD5F /* WeatherSerivce.swift */; };
+		D036CA7E24D61A35004E2B7D /* cityList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FC8D9224D429ED00C08AD3 /* cityList.json */; };
+		D036CA7F24D61A48004E2B7D /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99924D473ED00B9CD5F /* Coord.swift */; };
+		D036CA8024D61A48004E2B7D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99B24D4742200B9CD5F /* CountryModel.swift */; };
+		D036CA8124D61A4C004E2B7D /* OverviewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D9624D42ACA00C08AD3 /* OverviewProtocols.swift */; };
+		D036CA8224D61A50004E2B7D /* OverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DA724D45EB000C08AD3 /* OverviewCoordinator.swift */; };
+		D036CA8324D61A53004E2B7D /* OverviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DA524D45EA500C08AD3 /* OverviewBuilder.swift */; };
+		D036CA8424D61A6D004E2B7D /* AppTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8D24D424D100C08AD3 /* AppTarget.swift */; };
+		D036CA8524D61A6D004E2B7D /* AppTargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8F24D424DD00C08AD3 /* AppTargetConstants.swift */; };
+		D036CA8624D61A71004E2B7D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8424D41DE200C08AD3 /* Date+Extensions.swift */; };
+		D036CA8724D61A71004E2B7D /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */; };
+		D036CA8824D61A71004E2B7D /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9BF24D4A78C00B9CD5F /* UIView+Extentions.swift */; };
+		D036CA8924D61A84004E2B7D /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9A124D48D2C00B9CD5F /* ForecastResponse.swift */; };
+		D036CA8A24D61A84004E2B7D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9A324D48D2C00B9CD5F /* List.swift */; };
+		D036CA8B24D61A84004E2B7D /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9A224D48D2C00B9CD5F /* Main.swift */; };
+		D036CA8C24D61A84004E2B7D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9A424D48D2C00B9CD5F /* Weather.swift */; };
+		D036CA8D24D61A87004E2B7D /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */; };
+		D036CA8E24D61A8B004E2B7D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DAD24D45EFE00C08AD3 /* SearchViewModel.swift */; };
+		D036CA8F24D61A95004E2B7D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99324D471D900B9CD5F /* SearchTableViewCell.swift */; };
+		D036CA9024D61A95004E2B7D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C4E99424D471D900B9CD5F /* SearchTableViewCell.xib */; };
+		D036CA9124D61A95004E2B7D /* SearchCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99724D4726700B9CD5F /* SearchCellDataSource.swift */; };
+		D036CA9224D61A95004E2B7D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DAF24D45F0C00C08AD3 /* SearchViewController.swift */; };
+		D036CA9324D61A95004E2B7D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FC8DB024D45F0C00C08AD3 /* SearchViewController.xib */; };
+		D036CA9424D61A9A004E2B7D /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DAB24D45ECB00C08AD3 /* SearchBuilder.swift */; };
+		D036CA9524D61A9F004E2B7D /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8DA924D45EC100C08AD3 /* SearchCoordinator.swift */; };
+		D036CA9624D61AAB004E2B7D /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044A53224D565A000E1D3F9 /* ForecastModel.swift */; };
+		D036CA9724D61AAB004E2B7D /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9B724D4A42F00B9CD5F /* DetailProtocol.swift */; };
+		D036CA9824D61AAB004E2B7D /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9B924D4A46C00B9CD5F /* DetailCoordinator.swift */; };
+		D036CA9924D61AAB004E2B7D /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9BB24D4A4FB00B9CD5F /* DetailBuilder.swift */; };
+		D036CA9A24D61AAB004E2B7D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9BD24D4A50600B9CD5F /* DetailViewModel.swift */; };
+		D036CA9B24D61AB0004E2B7D /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9AF24D4A0AE00B9CD5F /* ForecastView.swift */; };
+		D036CA9C24D61AB0004E2B7D /* ForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C4E9B124D4A0BC00B9CD5F /* ForecastView.xib */; };
+		D036CA9D24D61AB0004E2B7D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E9AA24D49D6B00B9CD5F /* DetailsViewController.swift */; };
+		D036CA9E24D61AB0004E2B7D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C4E9AB24D49D6B00B9CD5F /* DetailsViewController.xib */; };
+		D036CABB24D61ADB004E2B7D /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA024D61ADB004E2B7D /* InteractiveTransition.swift */; };
+		D036CABC24D61ADB004E2B7D /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA024D61ADB004E2B7D /* InteractiveTransition.swift */; };
+		D036CABD24D61ADB004E2B7D /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA124D61ADB004E2B7D /* PresentationController.swift */; };
+		D036CABE24D61ADB004E2B7D /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA124D61ADB004E2B7D /* PresentationController.swift */; };
+		D036CABF24D61ADB004E2B7D /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA224D61ADB004E2B7D /* UIImageView+Calculations.swift */; };
+		D036CAC024D61ADB004E2B7D /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA224D61ADB004E2B7D /* UIImageView+Calculations.swift */; };
+		D036CAC124D61ADB004E2B7D /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA324D61ADB004E2B7D /* UIView+Animations.swift */; };
+		D036CAC224D61ADB004E2B7D /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA324D61ADB004E2B7D /* UIView+Animations.swift */; };
+		D036CAC324D61ADB004E2B7D /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA424D61ADB004E2B7D /* PopupDialogDefaultView.swift */; };
+		D036CAC424D61ADB004E2B7D /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA424D61ADB004E2B7D /* PopupDialogDefaultView.swift */; };
+		D036CAC524D61ADB004E2B7D /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA524D61ADB004E2B7D /* PopupDialog.swift */; };
+		D036CAC624D61ADB004E2B7D /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA524D61ADB004E2B7D /* PopupDialog.swift */; };
+		D036CAC724D61ADB004E2B7D /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA624D61ADB004E2B7D /* PopupDialogOverlayView.swift */; };
+		D036CAC824D61ADB004E2B7D /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA624D61ADB004E2B7D /* PopupDialogOverlayView.swift */; };
+		D036CAC924D61ADB004E2B7D /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA724D61ADB004E2B7D /* PopupDialogButton.swift */; };
+		D036CACA24D61ADB004E2B7D /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA724D61ADB004E2B7D /* PopupDialogButton.swift */; };
+		D036CACB24D61ADB004E2B7D /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA824D61ADB004E2B7D /* UIViewController+Visibility.swift */; };
+		D036CACC24D61ADB004E2B7D /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA824D61ADB004E2B7D /* UIViewController+Visibility.swift */; };
+		D036CACD24D61ADB004E2B7D /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA924D61ADB004E2B7D /* TransitionAnimator.swift */; };
+		D036CACE24D61ADB004E2B7D /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAA924D61ADB004E2B7D /* TransitionAnimator.swift */; };
+		D036CACF24D61ADB004E2B7D /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAA24D61ADB004E2B7D /* PopupDialog+Keyboard.swift */; };
+		D036CAD024D61ADB004E2B7D /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAA24D61ADB004E2B7D /* PopupDialog+Keyboard.swift */; };
+		D036CAD124D61ADB004E2B7D /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAB24D61ADB004E2B7D /* PopupDialogDefaultViewController.swift */; };
+		D036CAD224D61ADB004E2B7D /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAB24D61ADB004E2B7D /* PopupDialogDefaultViewController.swift */; };
+		D036CAD324D61ADB004E2B7D /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAC24D61ADB004E2B7D /* TransitionAnimations.swift */; };
+		D036CAD424D61ADB004E2B7D /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAC24D61ADB004E2B7D /* TransitionAnimations.swift */; };
+		D036CAD524D61ADB004E2B7D /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAD24D61ADB004E2B7D /* PopupDialogDefaultButtons.swift */; };
+		D036CAD624D61ADB004E2B7D /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAD24D61ADB004E2B7D /* PopupDialogDefaultButtons.swift */; };
+		D036CAD724D61ADB004E2B7D /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAE24D61ADB004E2B7D /* PresentationManager.swift */; };
+		D036CAD824D61ADB004E2B7D /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAE24D61ADB004E2B7D /* PresentationManager.swift */; };
+		D036CAD924D61ADB004E2B7D /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAF24D61ADB004E2B7D /* PopupDialogContainerView.swift */; };
+		D036CADA24D61ADB004E2B7D /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAAF24D61ADB004E2B7D /* PopupDialogContainerView.swift */; };
+		D036CADB24D61ADB004E2B7D /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB124D61ADB004E2B7D /* AlertHandler.swift */; };
+		D036CADC24D61ADB004E2B7D /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB124D61ADB004E2B7D /* AlertHandler.swift */; };
+		D036CADD24D61ADB004E2B7D /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB324D61ADB004E2B7D /* CGImage+Accelerate.swift */; };
+		D036CADE24D61ADB004E2B7D /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB324D61ADB004E2B7D /* CGImage+Accelerate.swift */; };
+		D036CADF24D61ADB004E2B7D /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB424D61ADB004E2B7D /* CGContext+CGImage.swift */; };
+		D036CAE024D61ADB004E2B7D /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB424D61ADB004E2B7D /* CGContext+CGImage.swift */; };
+		D036CAE124D61ADB004E2B7D /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB524D61ADB004E2B7D /* CaptureQuality.swift */; };
+		D036CAE224D61ADB004E2B7D /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB524D61ADB004E2B7D /* CaptureQuality.swift */; };
+		D036CAE324D61ADB004E2B7D /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB724D61ADB004E2B7D /* TrackingMode.swift */; };
+		D036CAE424D61ADB004E2B7D /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB724D61ADB004E2B7D /* TrackingMode.swift */; };
+		D036CAE524D61ADB004E2B7D /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB824D61ADB004E2B7D /* UIImage+Blur.swift */; };
+		D036CAE624D61ADB004E2B7D /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB824D61ADB004E2B7D /* UIImage+Blur.swift */; };
+		D036CAE724D61ADB004E2B7D /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB924D61ADB004E2B7D /* BlurLayer.swift */; };
+		D036CAE824D61ADB004E2B7D /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAB924D61ADB004E2B7D /* BlurLayer.swift */; };
+		D036CAE924D61ADB004E2B7D /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CABA24D61ADB004E2B7D /* DynamicBlurView.swift */; };
+		D036CAEA24D61ADB004E2B7D /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CABA24D61ADB004E2B7D /* DynamicBlurView.swift */; };
+		D036CAEB24D61AFE004E2B7D /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D3024D41C0C00C08AD3 /* OverviewViewController.swift */; };
+		D036CAF024D62334004E2B7D /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAEF24D62334004E2B7D /* CacheTests.swift */; };
+		D036CAF224D6234B004E2B7D /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAF124D6234B004E2B7D /* WeatherServiceTests.swift */; };
+		D036CAF424D62385004E2B7D /* CacheHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAF324D62385004E2B7D /* CacheHandlerProtocol.swift */; };
+		D036CAF524D62385004E2B7D /* CacheHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CAF324D62385004E2B7D /* CacheHandlerProtocol.swift */; };
 		D044A53324D565A000E1D3F9 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044A53224D565A000E1D3F9 /* ForecastModel.swift */; };
 		D0C4E98F24D4633C00B9CD5F /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */; };
 		D0C4E99124D4643600B9CD5F /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */; };
@@ -40,29 +130,6 @@
 		D0FC8D3624D41C0D00C08AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FC8D3524D41C0D00C08AD3 /* Assets.xcassets */; };
 		D0FC8D3924D41C0D00C08AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FC8D3724D41C0D00C08AD3 /* LaunchScreen.storyboard */; };
 		D0FC8D4424D41C0D00C08AD3 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D4324D41C0D00C08AD3 /* WeatherTests.swift */; };
-		D0FC8D6D24D41DDD00C08AD3 /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5424D41DDD00C08AD3 /* CGImage+Accelerate.swift */; };
-		D0FC8D6E24D41DDD00C08AD3 /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5524D41DDD00C08AD3 /* CGContext+CGImage.swift */; };
-		D0FC8D6F24D41DDD00C08AD3 /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5624D41DDD00C08AD3 /* CaptureQuality.swift */; };
-		D0FC8D7024D41DDD00C08AD3 /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5824D41DDD00C08AD3 /* TrackingMode.swift */; };
-		D0FC8D7124D41DDD00C08AD3 /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5924D41DDD00C08AD3 /* UIImage+Blur.swift */; };
-		D0FC8D7224D41DDD00C08AD3 /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5A24D41DDD00C08AD3 /* BlurLayer.swift */; };
-		D0FC8D7324D41DDD00C08AD3 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5B24D41DDD00C08AD3 /* DynamicBlurView.swift */; };
-		D0FC8D7424D41DDD00C08AD3 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5D24D41DDD00C08AD3 /* InteractiveTransition.swift */; };
-		D0FC8D7524D41DDD00C08AD3 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5E24D41DDD00C08AD3 /* PresentationController.swift */; };
-		D0FC8D7624D41DDD00C08AD3 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D5F24D41DDD00C08AD3 /* UIImageView+Calculations.swift */; };
-		D0FC8D7724D41DDD00C08AD3 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6024D41DDD00C08AD3 /* UIView+Animations.swift */; };
-		D0FC8D7824D41DDD00C08AD3 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6124D41DDD00C08AD3 /* PopupDialogDefaultView.swift */; };
-		D0FC8D7924D41DDD00C08AD3 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6224D41DDD00C08AD3 /* PopupDialog.swift */; };
-		D0FC8D7A24D41DDD00C08AD3 /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6324D41DDD00C08AD3 /* PopupDialogOverlayView.swift */; };
-		D0FC8D7B24D41DDD00C08AD3 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6424D41DDD00C08AD3 /* PopupDialogButton.swift */; };
-		D0FC8D7C24D41DDD00C08AD3 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6524D41DDD00C08AD3 /* UIViewController+Visibility.swift */; };
-		D0FC8D7D24D41DDD00C08AD3 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6624D41DDD00C08AD3 /* TransitionAnimator.swift */; };
-		D0FC8D7E24D41DDD00C08AD3 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6724D41DDD00C08AD3 /* PopupDialog+Keyboard.swift */; };
-		D0FC8D7F24D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6824D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift */; };
-		D0FC8D8024D41DDD00C08AD3 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6924D41DDD00C08AD3 /* TransitionAnimations.swift */; };
-		D0FC8D8124D41DDD00C08AD3 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6A24D41DDD00C08AD3 /* PopupDialogDefaultButtons.swift */; };
-		D0FC8D8224D41DDD00C08AD3 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6B24D41DDD00C08AD3 /* PresentationManager.swift */; };
-		D0FC8D8324D41DDD00C08AD3 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D6C24D41DDD00C08AD3 /* PopupDialogContainerView.swift */; };
 		D0FC8D8724D41DE200C08AD3 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8424D41DE200C08AD3 /* Date+Extensions.swift */; };
 		D0FC8D8E24D424D100C08AD3 /* AppTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8D24D424D100C08AD3 /* AppTarget.swift */; };
 		D0FC8D9024D424DD00C08AD3 /* AppTargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC8D8F24D424DD00C08AD3 /* AppTargetConstants.swift */; };
@@ -96,7 +163,35 @@
 		C920C0FD9D06BF7E3C87E1AE /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		D036CA6D24D574D2004E2B7D /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterNames.swift; sourceTree = "<group>"; };
-		D036CA7624D594D4004E2B7D /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		D036CA7824D61530004E2B7D /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
+		D036CAA024D61ADB004E2B7D /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
+		D036CAA124D61ADB004E2B7D /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		D036CAA224D61ADB004E2B7D /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		D036CAA324D61ADB004E2B7D /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		D036CAA424D61ADB004E2B7D /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		D036CAA524D61ADB004E2B7D /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
+		D036CAA624D61ADB004E2B7D /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		D036CAA724D61ADB004E2B7D /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
+		D036CAA824D61ADB004E2B7D /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		D036CAA924D61ADB004E2B7D /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		D036CAAA24D61ADB004E2B7D /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
+		D036CAAB24D61ADB004E2B7D /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		D036CAAC24D61ADB004E2B7D /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
+		D036CAAD24D61ADB004E2B7D /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		D036CAAE24D61ADB004E2B7D /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		D036CAAF24D61ADB004E2B7D /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		D036CAB124D61ADB004E2B7D /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		D036CAB324D61ADB004E2B7D /* CGImage+Accelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Accelerate.swift"; sourceTree = "<group>"; };
+		D036CAB424D61ADB004E2B7D /* CGContext+CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+CGImage.swift"; sourceTree = "<group>"; };
+		D036CAB524D61ADB004E2B7D /* CaptureQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureQuality.swift; sourceTree = "<group>"; };
+		D036CAB624D61ADB004E2B7D /* DynamicBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBlurView.h; sourceTree = "<group>"; };
+		D036CAB724D61ADB004E2B7D /* TrackingMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingMode.swift; sourceTree = "<group>"; };
+		D036CAB824D61ADB004E2B7D /* UIImage+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
+		D036CAB924D61ADB004E2B7D /* BlurLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLayer.swift; sourceTree = "<group>"; };
+		D036CABA24D61ADB004E2B7D /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
+		D036CAEF24D62334004E2B7D /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		D036CAF124D6234B004E2B7D /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
+		D036CAF324D62385004E2B7D /* CacheHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandlerProtocol.swift; sourceTree = "<group>"; };
 		D044A53224D565A000E1D3F9 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
 		D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
@@ -129,30 +224,6 @@
 		D0FC8D3F24D41C0D00C08AD3 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FC8D4324D41C0D00C08AD3 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		D0FC8D4524D41C0D00C08AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0FC8D5424D41DDD00C08AD3 /* CGImage+Accelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Accelerate.swift"; sourceTree = "<group>"; };
-		D0FC8D5524D41DDD00C08AD3 /* CGContext+CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+CGImage.swift"; sourceTree = "<group>"; };
-		D0FC8D5624D41DDD00C08AD3 /* CaptureQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureQuality.swift; sourceTree = "<group>"; };
-		D0FC8D5724D41DDD00C08AD3 /* DynamicBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBlurView.h; sourceTree = "<group>"; };
-		D0FC8D5824D41DDD00C08AD3 /* TrackingMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingMode.swift; sourceTree = "<group>"; };
-		D0FC8D5924D41DDD00C08AD3 /* UIImage+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
-		D0FC8D5A24D41DDD00C08AD3 /* BlurLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLayer.swift; sourceTree = "<group>"; };
-		D0FC8D5B24D41DDD00C08AD3 /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
-		D0FC8D5D24D41DDD00C08AD3 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
-		D0FC8D5E24D41DDD00C08AD3 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		D0FC8D5F24D41DDD00C08AD3 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
-		D0FC8D6024D41DDD00C08AD3 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
-		D0FC8D6124D41DDD00C08AD3 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
-		D0FC8D6224D41DDD00C08AD3 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
-		D0FC8D6324D41DDD00C08AD3 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
-		D0FC8D6424D41DDD00C08AD3 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
-		D0FC8D6524D41DDD00C08AD3 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
-		D0FC8D6624D41DDD00C08AD3 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
-		D0FC8D6724D41DDD00C08AD3 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
-		D0FC8D6824D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
-		D0FC8D6924D41DDD00C08AD3 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
-		D0FC8D6A24D41DDD00C08AD3 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
-		D0FC8D6B24D41DDD00C08AD3 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
-		D0FC8D6C24D41DDD00C08AD3 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
 		D0FC8D8424D41DE200C08AD3 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D0FC8D8D24D424D100C08AD3 /* AppTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTarget.swift; sourceTree = "<group>"; };
 		D0FC8D8F24D424DD00C08AD3 /* AppTargetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTargetConstants.swift; sourceTree = "<group>"; };
@@ -213,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				D036CA6D24D574D2004E2B7D /* CacheHandler.swift */,
+				D036CAF324D62385004E2B7D /* CacheHandlerProtocol.swift */,
 			);
 			path = CacheHandler;
 			sourceTree = "<group>";
@@ -225,12 +297,50 @@
 			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
-		D036CA7524D594C8004E2B7D /* AlertHandler */ = {
+		D036CA9F24D61ADB004E2B7D /* PopupDialog */ = {
 			isa = PBXGroup;
 			children = (
-				D036CA7624D594D4004E2B7D /* AlertHandler.swift */,
+				D036CAA024D61ADB004E2B7D /* InteractiveTransition.swift */,
+				D036CAA124D61ADB004E2B7D /* PresentationController.swift */,
+				D036CAA224D61ADB004E2B7D /* UIImageView+Calculations.swift */,
+				D036CAA324D61ADB004E2B7D /* UIView+Animations.swift */,
+				D036CAA424D61ADB004E2B7D /* PopupDialogDefaultView.swift */,
+				D036CAA524D61ADB004E2B7D /* PopupDialog.swift */,
+				D036CAA624D61ADB004E2B7D /* PopupDialogOverlayView.swift */,
+				D036CAA724D61ADB004E2B7D /* PopupDialogButton.swift */,
+				D036CAA824D61ADB004E2B7D /* UIViewController+Visibility.swift */,
+				D036CAA924D61ADB004E2B7D /* TransitionAnimator.swift */,
+				D036CAAA24D61ADB004E2B7D /* PopupDialog+Keyboard.swift */,
+				D036CAAB24D61ADB004E2B7D /* PopupDialogDefaultViewController.swift */,
+				D036CAAC24D61ADB004E2B7D /* TransitionAnimations.swift */,
+				D036CAAD24D61ADB004E2B7D /* PopupDialogDefaultButtons.swift */,
+				D036CAAE24D61ADB004E2B7D /* PresentationManager.swift */,
+				D036CAAF24D61ADB004E2B7D /* PopupDialogContainerView.swift */,
+			);
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		D036CAB024D61ADB004E2B7D /* AlertHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D036CAB124D61ADB004E2B7D /* AlertHandler.swift */,
 			);
 			path = AlertHandler;
+			sourceTree = "<group>";
+		};
+		D036CAB224D61ADB004E2B7D /* DynamicBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				D036CAB324D61ADB004E2B7D /* CGImage+Accelerate.swift */,
+				D036CAB424D61ADB004E2B7D /* CGContext+CGImage.swift */,
+				D036CAB524D61ADB004E2B7D /* CaptureQuality.swift */,
+				D036CAB624D61ADB004E2B7D /* DynamicBlurView.h */,
+				D036CAB724D61ADB004E2B7D /* TrackingMode.swift */,
+				D036CAB824D61ADB004E2B7D /* UIImage+Blur.swift */,
+				D036CAB924D61ADB004E2B7D /* BlurLayer.swift */,
+				D036CABA24D61ADB004E2B7D /* DynamicBlurView.swift */,
+			);
+			path = DynamicBlurView;
 			sourceTree = "<group>";
 		};
 		D044A53424D5692000E1D3F9 /* Model */ = {
@@ -379,8 +489,11 @@
 		D0FC8D4224D41C0D00C08AD3 /* WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0FC8D4324D41C0D00C08AD3 /* WeatherTests.swift */,
 				D0FC8D4524D41C0D00C08AD3 /* Info.plist */,
+				D036CA7824D61530004E2B7D /* Overview.swift */,
+				D0FC8D4324D41C0D00C08AD3 /* WeatherTests.swift */,
+				D036CAEF24D62334004E2B7D /* CacheTests.swift */,
+				D036CAF124D6234B004E2B7D /* WeatherServiceTests.swift */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -398,9 +511,9 @@
 		D0FC8D4F24D41D5000C08AD3 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				D036CA7524D594C8004E2B7D /* AlertHandler */,
-				D0FC8D5324D41DDD00C08AD3 /* DynamicBlurView */,
-				D0FC8D5C24D41DDD00C08AD3 /* PopupDialog */,
+				D036CAB024D61ADB004E2B7D /* AlertHandler */,
+				D036CAB224D61ADB004E2B7D /* DynamicBlurView */,
+				D036CA9F24D61ADB004E2B7D /* PopupDialog */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -412,44 +525,6 @@
 				D0FC8D8F24D424DD00C08AD3 /* AppTargetConstants.swift */,
 			);
 			path = Target;
-			sourceTree = "<group>";
-		};
-		D0FC8D5324D41DDD00C08AD3 /* DynamicBlurView */ = {
-			isa = PBXGroup;
-			children = (
-				D0FC8D5424D41DDD00C08AD3 /* CGImage+Accelerate.swift */,
-				D0FC8D5524D41DDD00C08AD3 /* CGContext+CGImage.swift */,
-				D0FC8D5624D41DDD00C08AD3 /* CaptureQuality.swift */,
-				D0FC8D5724D41DDD00C08AD3 /* DynamicBlurView.h */,
-				D0FC8D5824D41DDD00C08AD3 /* TrackingMode.swift */,
-				D0FC8D5924D41DDD00C08AD3 /* UIImage+Blur.swift */,
-				D0FC8D5A24D41DDD00C08AD3 /* BlurLayer.swift */,
-				D0FC8D5B24D41DDD00C08AD3 /* DynamicBlurView.swift */,
-			);
-			path = DynamicBlurView;
-			sourceTree = "<group>";
-		};
-		D0FC8D5C24D41DDD00C08AD3 /* PopupDialog */ = {
-			isa = PBXGroup;
-			children = (
-				D0FC8D5D24D41DDD00C08AD3 /* InteractiveTransition.swift */,
-				D0FC8D5E24D41DDD00C08AD3 /* PresentationController.swift */,
-				D0FC8D5F24D41DDD00C08AD3 /* UIImageView+Calculations.swift */,
-				D0FC8D6024D41DDD00C08AD3 /* UIView+Animations.swift */,
-				D0FC8D6124D41DDD00C08AD3 /* PopupDialogDefaultView.swift */,
-				D0FC8D6224D41DDD00C08AD3 /* PopupDialog.swift */,
-				D0FC8D6324D41DDD00C08AD3 /* PopupDialogOverlayView.swift */,
-				D0FC8D6424D41DDD00C08AD3 /* PopupDialogButton.swift */,
-				D0FC8D6524D41DDD00C08AD3 /* UIViewController+Visibility.swift */,
-				D0FC8D6624D41DDD00C08AD3 /* TransitionAnimator.swift */,
-				D0FC8D6724D41DDD00C08AD3 /* PopupDialog+Keyboard.swift */,
-				D0FC8D6824D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift */,
-				D0FC8D6924D41DDD00C08AD3 /* TransitionAnimations.swift */,
-				D0FC8D6A24D41DDD00C08AD3 /* PopupDialogDefaultButtons.swift */,
-				D0FC8D6B24D41DDD00C08AD3 /* PresentationManager.swift */,
-				D0FC8D6C24D41DDD00C08AD3 /* PopupDialogContainerView.swift */,
-			);
-			path = PopupDialog;
 			sourceTree = "<group>";
 		};
 		D0FC8D8B24D41E8700C08AD3 /* Scenes */ = {
@@ -684,6 +759,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D036CA7E24D61A35004E2B7D /* cityList.json in Resources */,
+				D036CA9024D61A95004E2B7D /* SearchTableViewCell.xib in Resources */,
+				D036CA9E24D61AB0004E2B7D /* DetailsViewController.xib in Resources */,
+				D036CA9324D61A95004E2B7D /* SearchViewController.xib in Resources */,
+				D036CA9C24D61AB0004E2B7D /* ForecastView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,61 +839,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0FC8D9024D424DD00C08AD3 /* AppTargetConstants.swift in Sources */,
-				D0FC8D7D24D41DDD00C08AD3 /* TransitionAnimator.swift in Sources */,
 				D0C4E99C24D4742200B9CD5F /* CountryModel.swift in Sources */,
-				D0FC8D7E24D41DDD00C08AD3 /* PopupDialog+Keyboard.swift in Sources */,
+				D036CAD524D61ADB004E2B7D /* PopupDialogDefaultButtons.swift in Sources */,
 				D0C4E99A24D473ED00B9CD5F /* Coord.swift in Sources */,
-				D0FC8D7324D41DDD00C08AD3 /* DynamicBlurView.swift in Sources */,
 				D0FC8DB124D45F0C00C08AD3 /* SearchViewController.swift in Sources */,
 				D036CA6E24D574D2004E2B7D /* CacheHandler.swift in Sources */,
 				D0FC8DAE24D45EFE00C08AD3 /* SearchViewModel.swift in Sources */,
 				D0FC8D8724D41DE200C08AD3 /* Date+Extensions.swift in Sources */,
 				D0FC8DA624D45EA500C08AD3 /* OverviewBuilder.swift in Sources */,
+				D036CAC524D61ADB004E2B7D /* PopupDialog.swift in Sources */,
+				D036CAD724D61ADB004E2B7D /* PresentationManager.swift in Sources */,
 				D0FC8DAA24D45EC100C08AD3 /* SearchCoordinator.swift in Sources */,
 				D0C4E9AC24D49D6B00B9CD5F /* DetailsViewController.swift in Sources */,
+				D036CAE924D61ADB004E2B7D /* DynamicBlurView.swift in Sources */,
+				D036CABF24D61ADB004E2B7D /* UIImageView+Calculations.swift in Sources */,
 				D0C4E9BA24D4A46C00B9CD5F /* DetailCoordinator.swift in Sources */,
-				D0FC8D6D24D41DDD00C08AD3 /* CGImage+Accelerate.swift in Sources */,
+				D036CACB24D61ADB004E2B7D /* UIViewController+Visibility.swift in Sources */,
+				D036CABD24D61ADB004E2B7D /* PresentationController.swift in Sources */,
+				D036CAC324D61ADB004E2B7D /* PopupDialogDefaultView.swift in Sources */,
+				D036CAD324D61ADB004E2B7D /* TransitionAnimations.swift in Sources */,
 				D0FC8D8E24D424D100C08AD3 /* AppTarget.swift in Sources */,
-				D0FC8D7C24D41DDD00C08AD3 /* UIViewController+Visibility.swift in Sources */,
-				D0FC8D8024D41DDD00C08AD3 /* TransitionAnimations.swift in Sources */,
 				D0C4E9A524D48D2C00B9CD5F /* ForecastResponse.swift in Sources */,
 				D0FC8DAC24D45ECB00C08AD3 /* SearchBuilder.swift in Sources */,
+				D036CAE524D61ADB004E2B7D /* UIImage+Blur.swift in Sources */,
 				D0C4E9A724D48D2C00B9CD5F /* List.swift in Sources */,
-				D0FC8D7124D41DDD00C08AD3 /* UIImage+Blur.swift in Sources */,
 				D0C4E98F24D4633C00B9CD5F /* SearchProtocols.swift in Sources */,
-				D0FC8D8124D41DDD00C08AD3 /* PopupDialogDefaultButtons.swift in Sources */,
-				D0FC8D8324D41DDD00C08AD3 /* PopupDialogContainerView.swift in Sources */,
+				D036CADD24D61ADB004E2B7D /* CGImage+Accelerate.swift in Sources */,
+				D036CADB24D61ADB004E2B7D /* AlertHandler.swift in Sources */,
+				D036CAF424D62385004E2B7D /* CacheHandlerProtocol.swift in Sources */,
 				D044A53324D565A000E1D3F9 /* ForecastModel.swift in Sources */,
+				D036CAC124D61ADB004E2B7D /* UIView+Animations.swift in Sources */,
+				D036CABB24D61ADB004E2B7D /* InteractiveTransition.swift in Sources */,
 				D0C4E9BE24D4A50600B9CD5F /* DetailViewModel.swift in Sources */,
-				D0FC8D7824D41DDD00C08AD3 /* PopupDialogDefaultView.swift in Sources */,
-				D0FC8D7524D41DDD00C08AD3 /* PresentationController.swift in Sources */,
-				D0FC8D7024D41DDD00C08AD3 /* TrackingMode.swift in Sources */,
 				D0C4E99524D471D900B9CD5F /* SearchTableViewCell.swift in Sources */,
-				D0FC8D7724D41DDD00C08AD3 /* UIView+Animations.swift in Sources */,
 				D0FC8DA824D45EB000C08AD3 /* OverviewCoordinator.swift in Sources */,
 				D0C4E99124D4643600B9CD5F /* UIViewController+Extentions.swift in Sources */,
-				D0FC8D6F24D41DDD00C08AD3 /* CaptureQuality.swift in Sources */,
-				D0FC8D7A24D41DDD00C08AD3 /* PopupDialogOverlayView.swift in Sources */,
 				D0C4E9A624D48D2C00B9CD5F /* Main.swift in Sources */,
-				D0FC8D7224D41DDD00C08AD3 /* BlurLayer.swift in Sources */,
-				D0FC8D7F24D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift in Sources */,
-				D036CA7724D594D4004E2B7D /* AlertHandler.swift in Sources */,
+				D036CACD24D61ADB004E2B7D /* TransitionAnimator.swift in Sources */,
+				D036CAD924D61ADB004E2B7D /* PopupDialogContainerView.swift in Sources */,
+				D036CADF24D61ADB004E2B7D /* CGContext+CGImage.swift in Sources */,
 				D0C4E9BC24D4A4FB00B9CD5F /* DetailBuilder.swift in Sources */,
+				D036CAE324D61ADB004E2B7D /* TrackingMode.swift in Sources */,
+				D036CAC724D61ADB004E2B7D /* PopupDialogOverlayView.swift in Sources */,
 				D0C4E9A824D48D2C00B9CD5F /* Weather.swift in Sources */,
 				D0FC8D9724D42ACA00C08AD3 /* OverviewProtocols.swift in Sources */,
 				D0C4E99824D4726700B9CD5F /* SearchCellDataSource.swift in Sources */,
 				D0FC8D9B24D42AE800C08AD3 /* OverviewViewModel.swift in Sources */,
+				D036CACF24D61ADB004E2B7D /* PopupDialog+Keyboard.swift in Sources */,
+				D036CAE124D61ADB004E2B7D /* CaptureQuality.swift in Sources */,
+				D036CAD124D61ADB004E2B7D /* PopupDialogDefaultViewController.swift in Sources */,
+				D036CAC924D61ADB004E2B7D /* PopupDialogButton.swift in Sources */,
 				D036CA7424D5930C004E2B7D /* NotificationCenterNames.swift in Sources */,
 				D0C4E9B024D4A0AE00B9CD5F /* ForecastView.swift in Sources */,
-				D0FC8D6E24D41DDD00C08AD3 /* CGContext+CGImage.swift in Sources */,
-				D0FC8D7424D41DDD00C08AD3 /* InteractiveTransition.swift in Sources */,
 				D0FC8D3124D41C0C00C08AD3 /* OverviewViewController.swift in Sources */,
-				D0FC8D8224D41DDD00C08AD3 /* PresentationManager.swift in Sources */,
-				D0FC8D7624D41DDD00C08AD3 /* UIImageView+Calculations.swift in Sources */,
-				D0FC8D7B24D41DDD00C08AD3 /* PopupDialogButton.swift in Sources */,
 				D0C4E9B824D4A42F00B9CD5F /* DetailProtocol.swift in Sources */,
-				D0FC8D7924D41DDD00C08AD3 /* PopupDialog.swift in Sources */,
 				D0C4E9C024D4A78C00B9CD5F /* UIView+Extentions.swift in Sources */,
+				D036CAE724D61ADB004E2B7D /* BlurLayer.swift in Sources */,
 				D0C4E99F24D487A300B9CD5F /* WeatherSerivce.swift in Sources */,
 				D0FC8D2D24D41C0C00C08AD3 /* AppDelegate.swift in Sources */,
 			);
@@ -823,7 +904,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D036CA8E24D61A8B004E2B7D /* SearchViewModel.swift in Sources */,
+				D036CA9924D61AAB004E2B7D /* DetailBuilder.swift in Sources */,
+				D036CAD624D61ADB004E2B7D /* PopupDialogDefaultButtons.swift in Sources */,
+				D036CA9B24D61AB0004E2B7D /* ForecastView.swift in Sources */,
+				D036CA7F24D61A48004E2B7D /* Coord.swift in Sources */,
+				D036CA8224D61A50004E2B7D /* OverviewCoordinator.swift in Sources */,
+				D036CA9824D61AAB004E2B7D /* DetailCoordinator.swift in Sources */,
+				D036CA8924D61A84004E2B7D /* ForecastResponse.swift in Sources */,
+				D036CAEB24D61AFE004E2B7D /* OverviewViewController.swift in Sources */,
+				D036CA9524D61A9F004E2B7D /* SearchCoordinator.swift in Sources */,
+				D036CAC624D61ADB004E2B7D /* PopupDialog.swift in Sources */,
+				D036CAD824D61ADB004E2B7D /* PresentationManager.swift in Sources */,
+				D036CA7C24D61A19004E2B7D /* CacheHandler.swift in Sources */,
+				D036CA9D24D61AB0004E2B7D /* DetailsViewController.swift in Sources */,
+				D036CAEA24D61ADB004E2B7D /* DynamicBlurView.swift in Sources */,
+				D036CAC024D61ADB004E2B7D /* UIImageView+Calculations.swift in Sources */,
+				D036CA9624D61AAB004E2B7D /* ForecastModel.swift in Sources */,
+				D036CACC24D61ADB004E2B7D /* UIViewController+Visibility.swift in Sources */,
+				D036CABE24D61ADB004E2B7D /* PresentationController.swift in Sources */,
+				D036CAC424D61ADB004E2B7D /* PopupDialogDefaultView.swift in Sources */,
+				D036CAF524D62385004E2B7D /* CacheHandlerProtocol.swift in Sources */,
+				D036CAD424D61ADB004E2B7D /* TransitionAnimations.swift in Sources */,
+				D036CA8C24D61A84004E2B7D /* Weather.swift in Sources */,
+				D036CA9124D61A95004E2B7D /* SearchCellDataSource.swift in Sources */,
+				D036CA8724D61A71004E2B7D /* UIViewController+Extentions.swift in Sources */,
+				D036CAE624D61ADB004E2B7D /* UIImage+Blur.swift in Sources */,
+				D036CA8024D61A48004E2B7D /* CountryModel.swift in Sources */,
+				D036CA8F24D61A95004E2B7D /* SearchTableViewCell.swift in Sources */,
+				D036CADE24D61ADB004E2B7D /* CGImage+Accelerate.swift in Sources */,
+				D036CADC24D61ADB004E2B7D /* AlertHandler.swift in Sources */,
+				D036CA7B24D61A16004E2B7D /* NotificationCenterNames.swift in Sources */,
+				D036CAC224D61ADB004E2B7D /* UIView+Animations.swift in Sources */,
+				D036CABC24D61ADB004E2B7D /* InteractiveTransition.swift in Sources */,
+				D036CA9A24D61AAB004E2B7D /* DetailViewModel.swift in Sources */,
+				D036CA8324D61A53004E2B7D /* OverviewBuilder.swift in Sources */,
+				D036CA8D24D61A87004E2B7D /* SearchProtocols.swift in Sources */,
+				D036CA9424D61A9A004E2B7D /* SearchBuilder.swift in Sources */,
+				D036CA8824D61A71004E2B7D /* UIView+Extentions.swift in Sources */,
+				D036CACE24D61ADB004E2B7D /* TransitionAnimator.swift in Sources */,
+				D036CADA24D61ADB004E2B7D /* PopupDialogContainerView.swift in Sources */,
+				D036CAE024D61ADB004E2B7D /* CGContext+CGImage.swift in Sources */,
+				D036CA8424D61A6D004E2B7D /* AppTarget.swift in Sources */,
+				D036CAE424D61ADB004E2B7D /* TrackingMode.swift in Sources */,
+				D036CAF224D6234B004E2B7D /* WeatherServiceTests.swift in Sources */,
+				D036CAC824D61ADB004E2B7D /* PopupDialogOverlayView.swift in Sources */,
+				D036CA9224D61A95004E2B7D /* SearchViewController.swift in Sources */,
+				D036CA8124D61A4C004E2B7D /* OverviewProtocols.swift in Sources */,
+				D036CA7924D61530004E2B7D /* Overview.swift in Sources */,
+				D036CA8B24D61A84004E2B7D /* Main.swift in Sources */,
+				D036CAD024D61ADB004E2B7D /* PopupDialog+Keyboard.swift in Sources */,
+				D036CAE224D61ADB004E2B7D /* CaptureQuality.swift in Sources */,
+				D036CAD224D61ADB004E2B7D /* PopupDialogDefaultViewController.swift in Sources */,
+				D036CACA24D61ADB004E2B7D /* PopupDialogButton.swift in Sources */,
+				D036CA8624D61A71004E2B7D /* Date+Extensions.swift in Sources */,
+				D036CA8524D61A6D004E2B7D /* AppTargetConstants.swift in Sources */,
 				D0FC8D4424D41C0D00C08AD3 /* WeatherTests.swift in Sources */,
+				D036CA7D24D61A1E004E2B7D /* WeatherSerivce.swift in Sources */,
+				D036CAF024D62334004E2B7D /* CacheTests.swift in Sources */,
+				D036CA7A24D619F7004E2B7D /* OverviewViewModel.swift in Sources */,
+				D036CAE824D61ADB004E2B7D /* BlurLayer.swift in Sources */,
+				D036CA9724D61AAB004E2B7D /* DetailProtocol.swift in Sources */,
+				D036CA8A24D61A84004E2B7D /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,9 @@ import Foundation
 import Moya
 
 class WeatherSerivce {
-    
-    
+     
     var delegate: WeatherSerivceDelegate?
+    
     var walletProvider = MoyaProvider<AppTarget>(callbackQueue: DispatchQueue.global(qos: .utility))
     
     init(delegate:WeatherSerivceDelegate) {

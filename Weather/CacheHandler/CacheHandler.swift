@@ -10,7 +10,7 @@
 import Foundation
 import DataCache
 
-class CacheHandler {
+class CacheHandler:CacheHandlerProtocol {
     
     static let shared = CacheHandler()
     
@@ -28,6 +28,9 @@ class CacheHandler {
         }
     }
     
+    func clearAll() {
+        DataCache.instance.cleanAll()
+    }
     public func SaveData(object:ForecastModel) -> CacheResponse {
         var objects = loadAllCachedData()
         if objects.count == 5 {
