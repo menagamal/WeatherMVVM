@@ -26,7 +26,11 @@ class SearchViewController: UIViewController ,SearchViewProtocol{
     func presentDetailDialog() {
         coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast(), name: viewModel!.countryName)
     }
-    
+    func showError(with message: String) {
+        AlertHandler.showAlert(viewController: self, text: message, style: .alert, UIAlertAction(title: "Okay", style: .default, handler: { (_) in
+            
+        }))
+    }
 }
 
 extension SearchViewController:UISearchBarDelegate {
@@ -35,6 +39,12 @@ extension SearchViewController:UISearchBarDelegate {
             viewModel?.loadAllCountries()
         } else {
             viewModel?.searchCities(with: searchText)
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let str  = searchBar.text ,!str.isEmpty{
+            viewModel?.searchButtonClicked(str: str)
         }
     }
 }

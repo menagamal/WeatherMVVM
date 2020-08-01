@@ -14,6 +14,8 @@ protocol SearchViewProtocol: class {
     var coordinator: SearchCoordinatorProtocol? { get set }
     var citiesTable: UITableView! { get set }
     func presentDetailDialog()
+    func showError(with message: String)
+       
 }
 
 //MARK: VIEWMODEL -
@@ -21,6 +23,7 @@ protocol SearchViewModelProtocol: class {
     var view: SearchViewProtocol?  { get set }
     func searchCities(with city:String)
     func loadAllCountries()
+    func searchButtonClicked(str:String)
     func selectedForecast() -> [ListStruct]
     var countryName:String {get set }
 }

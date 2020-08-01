@@ -15,6 +15,7 @@ protocol OverviewViewProtocol: class {
     var viewModel: OverviewViewModelProtocol?  { get set }
     var coordinator: OverviewCoordinatorProtocol? { get set }
     func presentDetailDialog()
+    func showError(with message: String)
 
 }
 

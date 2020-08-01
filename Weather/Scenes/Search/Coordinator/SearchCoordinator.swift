@@ -11,7 +11,7 @@ import UIKit
 
 class SearchCoordinator: SearchCoordinatorProtocol {
     
-    var view: UIViewController!
+    weak  var view: UIViewController!
     func presentDialogDetail(forecast: [ListStruct],name:String) {
         let vc:DetailsViewController = UIViewController.instanceXib()
         DetailBuilder().createModule(view: vc, forecast: forecast, name: name)

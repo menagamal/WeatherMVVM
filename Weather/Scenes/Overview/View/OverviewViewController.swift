@@ -9,10 +9,10 @@
 import UIKit
 
 class OverviewViewController: UIViewController ,OverviewViewProtocol{
-   
+    
     @IBOutlet weak var tableFaviourte: UITableView!
     
-     var coordinator: OverviewCoordinatorProtocol?
+    var coordinator: OverviewCoordinatorProtocol?
     
     var viewModel: OverviewViewModelProtocol?
     
@@ -23,13 +23,13 @@ class OverviewViewController: UIViewController ,OverviewViewProtocol{
         viewModel?.requestLocationAccess()
         viewModel?.loadAllCountries()
         NotificationCenter.default.addObserver(self, selector: #selector(onReload(_:)), name: .onReload, object: nil)
-
+        
     }
     @objc func onReload(_ notification:Notification) {
-           // Do something now
+        // Do something now
         viewModel?.loadAllCountries()
-       }
-
+    }
+    
     
     @IBAction func search(_ sender: Any) {
         coordinator!.navigateToSearch(countries: viewModel!.returnAllCountires())
@@ -42,6 +42,10 @@ class OverviewViewController: UIViewController ,OverviewViewProtocol{
             coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast(), name: viewModel!.countryName)
         }
     }
-       
+    
+    func showError(with message: String) {
+        AlertHandler.showAlert(viewController: self, text: message, style: .alert, UIAlertAction(title: "Okay", style: .default, handler: nil ))
+    }
+    
 }
 

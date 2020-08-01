@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 class DetailCoordinator: DetailCoordinatorProtocol {
-    var view: UIViewController!
+    weak var view: UIViewController!
     
 }

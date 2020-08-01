@@ -32,6 +32,12 @@ class SearchViewModel: SearchViewModelProtocol {
         })
         dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.citiesTable, countries: filterd)
     }
+    
+    func searchButtonClicked(str: String) {
+        self.countryName = str
+        service?.searchWeather(with: str)
+    }
+    
 }
 
 
@@ -55,11 +61,13 @@ extension SearchViewModel:WeatherSerivceDelegate{
     }
     
     func invalidCityName() {
-        
+        countryName = ""
+        self.view?.showError(with: "City Not Found.")
     }
     
     func somethingWentWrong(with message: String) {
-        
+        countryName = ""
+        self.view?.showError(with: message)
     }
     
     func selectedForecast() -> [ListStruct] {
