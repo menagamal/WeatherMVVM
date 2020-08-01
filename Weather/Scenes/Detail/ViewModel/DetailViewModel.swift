@@ -83,7 +83,6 @@ class DetailViewModel: DetailViewModelProtocol {
                 break
             }
         }
-        NotificationCenter.default.post(name: .onReload, object: nil)
     }
     
     func buttonTitle() -> String {

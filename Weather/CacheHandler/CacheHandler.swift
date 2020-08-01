@@ -51,7 +51,9 @@ class CacheHandler {
         }
         for (i,item)  in  objects.enumerated(){
             if item.id! == object.id!{
-                objects.remove(at: i)
+                if objects.indices.contains(i) {
+                    objects.remove(at: i)
+                }
             }
         }
         let data = NSKeyedArchiver.archivedData(withRootObject:objects)

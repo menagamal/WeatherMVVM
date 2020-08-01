@@ -94,9 +94,14 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
         if  !cachedModels.isEmpty {
             myCountries = constructCountryModels(objects: cachedModels, allcountries: countries)
             dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.tableFaviourte, countries: myCountries)
-        } else if !countryName.isEmpty {
-            myCountries = constructCountryModels(countryName: countryName, allcountries: countries)
-            dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.tableFaviourte, countries: myCountries)
+        }
+//        else if !countryName.isEmpty {
+//            dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.tableFaviourte, countries: [CountryModel]())
+////            myCountries = constructCountryModels(countryName: countryName, allcountries: countries)
+////            dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.tableFaviourte, countries: myCountries)
+//        }
+        else {
+            dataSource = SearchCellDataSource(delegate: self, tableView: self.view!.tableFaviourte, countries: [CountryModel]())
         }
     }
     

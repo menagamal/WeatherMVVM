@@ -28,18 +28,30 @@ class DetailsViewController: UIViewController ,DetailViewProtocol{
     }
     @IBAction func addToFav(_ sender: Any) {
         self.viewModel?.toggleFav()
-        self.dismiss(animated: true, completion: nil)
+        
     }
     func addedSuccessfullyToFavourite() {
-        
+        //AlertHandler.showAlert(viewController: self, text:)
+        AlertHandler.showAlert(viewController: self, text:  "Added Successfully To your Favourite Lib.", style: .alert, UIAlertAction(title: "Okay", style: .default, handler: { (_) in
+            self.dismiss(animated: true, completion: {
+                NotificationCenter.default.post(name: .onReload, object: nil)
+            })
+        }))
     }
     
     func removedSuccessfullyToFavourite() {
-        
+        AlertHandler.showAlert(viewController: self, text:  "Removed Successfully From your Favourite Lib.", style: .alert, UIAlertAction(title: "Okay", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: .onReload, object: nil)
+            self.dismiss(animated: true, completion: {
+                NotificationCenter.default.post(name: .onReload, object: nil)
+            })
+        }))
     }
     
     func cacheError(str: String) {
-        
+        AlertHandler.showAlert(viewController: self, text: str, style: .alert, UIAlertAction(title: "Okay", style: .default, handler: { (_) in
+            
+        }))
     }
     
     

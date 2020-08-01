@@ -11,6 +11,7 @@
 		99AF5F212D8D765329AC4A58 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F540E95D6D199E17A4E7EC /* Pods_Weather.framework */; };
 		D036CA6E24D574D2004E2B7D /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA6D24D574D2004E2B7D /* CacheHandler.swift */; };
 		D036CA7424D5930C004E2B7D /* NotificationCenterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */; };
+		D036CA7724D594D4004E2B7D /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7624D594D4004E2B7D /* AlertHandler.swift */; };
 		D044A53324D565A000E1D3F9 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044A53224D565A000E1D3F9 /* ForecastModel.swift */; };
 		D0C4E98F24D4633C00B9CD5F /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */; };
 		D0C4E99124D4643600B9CD5F /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */; };
@@ -95,6 +96,7 @@
 		C920C0FD9D06BF7E3C87E1AE /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		D036CA6D24D574D2004E2B7D /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterNames.swift; sourceTree = "<group>"; };
+		D036CA7624D594D4004E2B7D /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		D044A53224D565A000E1D3F9 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
 		D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 				D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */,
 			);
 			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		D036CA7524D594C8004E2B7D /* AlertHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D036CA7624D594D4004E2B7D /* AlertHandler.swift */,
+			);
+			path = AlertHandler;
 			sourceTree = "<group>";
 		};
 		D044A53424D5692000E1D3F9 /* Model */ = {
@@ -388,6 +398,7 @@
 		D0FC8D4F24D41D5000C08AD3 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				D036CA7524D594C8004E2B7D /* AlertHandler */,
 				D0FC8D5324D41DDD00C08AD3 /* DynamicBlurView */,
 				D0FC8D5C24D41DDD00C08AD3 /* PopupDialog */,
 			);
@@ -786,6 +797,7 @@
 				D0C4E9A624D48D2C00B9CD5F /* Main.swift in Sources */,
 				D0FC8D7224D41DDD00C08AD3 /* BlurLayer.swift in Sources */,
 				D0FC8D7F24D41DDD00C08AD3 /* PopupDialogDefaultViewController.swift in Sources */,
+				D036CA7724D594D4004E2B7D /* AlertHandler.swift in Sources */,
 				D0C4E9BC24D4A4FB00B9CD5F /* DetailBuilder.swift in Sources */,
 				D0C4E9A824D48D2C00B9CD5F /* Weather.swift in Sources */,
 				D0FC8D9724D42ACA00C08AD3 /* OverviewProtocols.swift in Sources */,
