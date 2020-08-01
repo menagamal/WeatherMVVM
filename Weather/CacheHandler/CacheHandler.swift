@@ -21,6 +21,7 @@ class CacheHandler {
     }
     
     public func fetchCache() {
+        CacheHandler.ids.removeAll()
         let objcs = loadAllCachedData()
         for item  in objcs {
             CacheHandler.ids.append(item.id!)
@@ -35,6 +36,7 @@ class CacheHandler {
         objects.append(object)
         let data = NSKeyedArchiver.archivedData(withRootObject:objects)
         DataCache.instance.write(data: data, forKey: CacheHandler.key)
+        fetchCache()
         return .Success
     }
     
@@ -54,7 +56,19 @@ class CacheHandler {
         }
         let data = NSKeyedArchiver.archivedData(withRootObject:objects)
         DataCache.instance.write(data: data, forKey: CacheHandler.key)
+        fetchCache()
         return .Success
+    }
+    public func fetchObject(with id:String) -> ForecastModel? {
+        let models = DataCache.instance.readObject(forKey: CacheHandler.key) as? [ForecastModel] ?? [ForecastModel]()
+        if models.isEmpty {
+            return nil
+        }
+        let filtered = models.filter({ $0.id! == id })
+        if filtered.isEmpty {
+            return nil
+        }
+        return filtered.first!
     }
     
 }

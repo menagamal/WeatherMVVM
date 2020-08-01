@@ -27,7 +27,8 @@ class DetailsViewController: UIViewController ,DetailViewProtocol{
         btnAction.setTitle(viewModel?.buttonTitle(), for: .normal)
     }
     @IBAction func addToFav(_ sender: Any) {
-        viewModel?.toggleFav()
+        self.viewModel?.toggleFav()
+        self.dismiss(animated: true, completion: nil)
     }
     func addedSuccessfullyToFavourite() {
         

@@ -25,8 +25,9 @@ protocol OverviewViewModelProtocol: class {
     func fetchCities()
     func returnAllCountires() -> [CountryModel]
     func selectedForecast() -> [ListStruct]
+    func selectedForecastModel() -> ForecastModel?
     func requestLocationAccess()
-
+    func loadAllCountries()
 }
 
 //MARK: Coordinator -
@@ -34,5 +35,6 @@ protocol OverviewCoordinatorProtocol: class {
     var view: UIViewController! { get set }
     func navigateToSearch(countries: [CountryModel])
     func presentDialogDetail(forecast: [ListStruct],name:String)
+    func presentDialogDetail(forecast: ForecastModel,name:String)
 
 }

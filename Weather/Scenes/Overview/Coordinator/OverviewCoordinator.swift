@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 
 class OverviewCoordinator: OverviewCoordinatorProtocol {
-    
     weak var view: UIViewController!
     
     func navigateToSearch(countries: [CountryModel]) {
@@ -22,6 +21,13 @@ class OverviewCoordinator: OverviewCoordinatorProtocol {
     func presentDialogDetail(forecast: [ListStruct],name:String) {
         let vc:DetailsViewController = UIViewController.instanceXib()
         DetailBuilder().createModule(view: vc, forecast: forecast, name: name)
+        let pop =  PopupDialog(viewController: vc, buttonAlignment: .horizontal, transitionStyle: .zoomIn, preferredWidth: 340, gestureDismissal: true, hideStatusBar: true, completion: nil)
+        view.present(pop, animated: true, completion: nil)
+    }
+    
+    func presentDialogDetail(forecast: ForecastModel, name: String) {
+        let vc:DetailsViewController = UIViewController.instanceXib()
+             DetailBuilder().createModule(view: vc, forecast: forecast, name: name)
              let pop =  PopupDialog(viewController: vc, buttonAlignment: .horizontal, transitionStyle: .zoomIn, preferredWidth: 340, gestureDismissal: true, hideStatusBar: true, completion: nil)
              view.present(pop, animated: true, completion: nil)
     }

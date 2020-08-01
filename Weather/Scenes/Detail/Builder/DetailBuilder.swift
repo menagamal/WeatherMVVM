@@ -23,4 +23,18 @@ class DetailBuilder {
         view.viewModel = viewModel
         
     }
+    
+    func createModule(view: DetailsViewController,forecast: ForecastModel,name:String) {
+        
+        let coordinator: DetailCoordinator = DetailCoordinator()
+        let viewModel: DetailViewModel = DetailViewModel(forecast: forecast, name: name)
+
+        viewModel.view = view
+        coordinator.view = view
+
+        view.coordinator  = coordinator
+        view.viewModel = viewModel
+        
+    }
+    
 }

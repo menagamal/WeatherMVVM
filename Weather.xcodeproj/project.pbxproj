@@ -10,6 +10,7 @@
 		30B8478B2E973507E6466F36 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004F762FFC6CF522C9AACA0C /* Pods_WeatherTests.framework */; };
 		99AF5F212D8D765329AC4A58 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F540E95D6D199E17A4E7EC /* Pods_Weather.framework */; };
 		D036CA6E24D574D2004E2B7D /* CacheHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA6D24D574D2004E2B7D /* CacheHandler.swift */; };
+		D036CA7424D5930C004E2B7D /* NotificationCenterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */; };
 		D044A53324D565A000E1D3F9 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044A53224D565A000E1D3F9 /* ForecastModel.swift */; };
 		D0C4E98F24D4633C00B9CD5F /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */; };
 		D0C4E99124D4643600B9CD5F /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */; };
@@ -93,6 +94,7 @@
 		A1B650E5D0542B7008996BEA /* Pods-WeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherTests/Pods-WeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C920C0FD9D06BF7E3C87E1AE /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		D036CA6D24D574D2004E2B7D /* CacheHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
+		D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterNames.swift; sourceTree = "<group>"; };
 		D044A53224D565A000E1D3F9 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		D0C4E98E24D4633C00B9CD5F /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
 		D0C4E99024D4643600B9CD5F /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 				D036CA6D24D574D2004E2B7D /* CacheHandler.swift */,
 			);
 			path = CacheHandler;
+			sourceTree = "<group>";
+		};
+		D036CA7224D592DD004E2B7D /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D036CA7324D5930C004E2B7D /* NotificationCenterNames.swift */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		D044A53424D5692000E1D3F9 /* Model */ = {
@@ -340,6 +350,7 @@
 		D0FC8D2B24D41C0C00C08AD3 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				D036CA7224D592DD004E2B7D /* NotificationCenter */,
 				D036CA6C24D574C6004E2B7D /* CacheHandler */,
 				D0C4E99D24D4879500B9CD5F /* Network */,
 				D0FC8D9124D429D800C08AD3 /* JsonFile */,
@@ -780,6 +791,7 @@
 				D0FC8D9724D42ACA00C08AD3 /* OverviewProtocols.swift in Sources */,
 				D0C4E99824D4726700B9CD5F /* SearchCellDataSource.swift in Sources */,
 				D0FC8D9B24D42AE800C08AD3 /* OverviewViewModel.swift in Sources */,
+				D036CA7424D5930C004E2B7D /* NotificationCenterNames.swift in Sources */,
 				D0C4E9B024D4A0AE00B9CD5F /* ForecastView.swift in Sources */,
 				D0FC8D6E24D41DDD00C08AD3 /* CGContext+CGImage.swift in Sources */,
 				D0FC8D7424D41DDD00C08AD3 /* InteractiveTransition.swift in Sources */,

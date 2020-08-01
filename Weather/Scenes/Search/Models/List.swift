@@ -13,21 +13,18 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 struct ListStruct : Codable {
-	let main : Main?
 	let weather : [Weather]?
 	let dt_txt : String?
     var date:Date?
     
 	enum CodingKeys: String, CodingKey {
 
-		case main = "main"
 		case weather = "weather"
 		case dt_txt = "dt_txt"
 	}
-
-	init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		main = try values.decodeIfPresent(Main.self, forKey: .main)
 		weather = try values.decodeIfPresent([Weather].self, forKey: .weather)
 		dt_txt = try values.decodeIfPresent(String.self, forKey: .dt_txt) ?? ""
         if let dt_txt = dt_txt {

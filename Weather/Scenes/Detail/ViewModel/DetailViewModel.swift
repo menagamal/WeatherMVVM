@@ -25,24 +25,32 @@ class DetailViewModel: DetailViewModelProtocol {
         self.name = name
         constructForecastModel()
     }
+    init(forecast:ForecastModel,name:String) {
+        self.model = forecast
+        self.name = name
+        self.forecast = [ListStruct]()
+    }
     
     private func constructForecastModel()  {
         var weathers = [Weather]()
+        var dates = [Date]()
         for item in forecast {
             if let itemWeather = item.weather {
                 if !itemWeather.isEmpty {
                     weathers.append(itemWeather.first!)
+                    dates.append(item.date!)
                 }
             }
         }
-        model  = ForecastModel(id: name, name: name, forecast: weathers)
+        model  = ForecastModel(id: name, name: name, forecast: weathers,dates: dates)
     }
     
     func loadForeCast() -> [ForecastView] {
         var views = [ForecastView]()
-        for item in forecast{
+        for (i,item) in model.forecast.enumerated() {
             let forecastView = ForecastView.loadFromNib(named: "ForecastView") as! ForecastView
-            forecastView.setDetails(date: (item.date?.dateToString(format: DateFormat.dd_MMM_yyyy.get()))!, weather: item.weather!.first!)
+            let date = model.dates[i]
+            forecastView.setDetails(date: (date.dateToString(format: DateFormat.dd_MMM_yyyy.get())), weather: item)
             views.append(forecastView)
         }
         return views
@@ -75,6 +83,7 @@ class DetailViewModel: DetailViewModelProtocol {
                 break
             }
         }
+        NotificationCenter.default.post(name: .onReload, object: nil)
     }
     
     func buttonTitle() -> String {
