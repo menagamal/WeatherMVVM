@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - DataCache (1.5)
   - FittedSheets (1.4.6)
   - IQKeyboardManagerSwift (6.2.1)
   - Moya (14.0.0):
@@ -11,6 +12,7 @@ PODS:
   - SDWebImage/Core (4.4.8)
 
 DEPENDENCIES:
+  - DataCache
   - FittedSheets
   - IQKeyboardManagerSwift (= 6.2.1)
   - Moya
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DataCache
     - FittedSheets
     - IQKeyboardManagerSwift
     - Moya
@@ -26,11 +29,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  DataCache: 8099e01aa35c2fd30f3410aae14ef5a130f6524b
   FittedSheets: 7f37fee2567d15dcde391f31eccbffb660ddebf0
   IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
-PODFILE CHECKSUM: 29c35c6f29db2be34d9c9ac3f6db1c4cb9dca5ed
+PODFILE CHECKSUM: 5e90a74ec830a46e278b89f818cd5cea29a22644
 
 COCOAPODS: 1.9.1

@@ -10,6 +10,7 @@ import UIKit
 
 class DetailsViewController: UIViewController ,DetailViewProtocol{
     
+    @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var forecastStackView: UIStackView!
     
     var viewModel: DetailViewModelProtocol?
@@ -23,7 +24,22 @@ class DetailsViewController: UIViewController ,DetailViewProtocol{
         for view in views {
             self.forecastStackView.addArrangedSubview(view)
         }
+        btnAction.setTitle(viewModel?.buttonTitle(), for: .normal)
+    }
+    @IBAction func addToFav(_ sender: Any) {
+        viewModel?.toggleFav()
+    }
+    func addedSuccessfullyToFavourite() {
         
     }
-
+    
+    func removedSuccessfullyToFavourite() {
+        
+    }
+    
+    func cacheError(str: String) {
+        
+    }
+    
+    
 }

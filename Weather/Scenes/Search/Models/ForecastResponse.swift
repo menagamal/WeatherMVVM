@@ -12,11 +12,12 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
+
 struct ForecastResponse : Codable {
 	let cod : String?
 	let message : Int?
 	let cnt : Int?
-	let list : [List]?
+	let list : [ListStruct]?
 	
 	enum CodingKeys: String, CodingKey {
 
@@ -31,7 +32,7 @@ struct ForecastResponse : Codable {
 		cod = try values.decodeIfPresent(String.self, forKey: .cod)
 		message = try values.decodeIfPresent(Int.self, forKey: .message)
 		cnt = try values.decodeIfPresent(Int.self, forKey: .cnt)
-		list = try values.decodeIfPresent([List].self, forKey: .list)
+		list = try values.decodeIfPresent([ListStruct].self, forKey: .list)
 		
 	}
 

@@ -16,9 +16,9 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
     var view: OverviewViewProtocol?
     var countries = [CountryModel]()
     private var service:WeatherSerivce?
-    private var selectedCountryForeCast  = [List]()
-    private  var locManager = CLLocationManager()
-    
+    private var selectedCountryForeCast  = [ListStruct]()
+    private var locManager = CLLocationManager()
+    var countryName = ""
     
     override init() {
         super.init()
@@ -48,7 +48,7 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
         return countries
     }
     
-    func selectedForecast() -> [List] {
+    func selectedForecast() -> [ListStruct] {
         return selectedCountryForeCast
     }
     
@@ -61,6 +61,7 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
             locManager = CLLocationManager()
             guard let currentLocation = locManager.location else {
+                self.countryName = "London"
                 self.service?.searchWeather(with: "London")
                 return
             }
@@ -72,8 +73,10 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
                 placeMark = placemarks?[0]
                 // Country
                 if let country = placeMark.addressDictionary!["Country"] as? NSString {
+                    self.countryName = String(country)
                     self.service?.searchWeather(with: String(country))
                 } else {
+                    self.countryName = "London"
                     self.service?.searchWeather(with: "London")
                 }
             })
@@ -84,7 +87,7 @@ class OverViewModel:NSObject, OverviewViewModelProtocol ,CLLocationManagerDelega
 
 extension OverViewModel:WeatherSerivceDelegate{
     
-    func forecastLoade(with list: [List]) {
+    func forecastLoade(with list: [ListStruct]) {
         self.selectedCountryForeCast.removeAll()
         for index in stride(from: 0, through: list.count - 2, by: 1) {
             if list[index].date!.calculateDiffInDays(date: list[index+1].date!) !=  0 {

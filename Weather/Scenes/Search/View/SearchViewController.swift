@@ -9,8 +9,6 @@
 import UIKit
 
 class SearchViewController: UIViewController ,SearchViewProtocol{
-   
-    
     
     var viewModel: SearchViewModelProtocol?
     
@@ -26,7 +24,7 @@ class SearchViewController: UIViewController ,SearchViewProtocol{
         self.viewModel?.loadAllCountries()
     }
     func presentDetailDialog() {
-        coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast())
+        coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast(), name: viewModel!.countryName)
     }
     
 }

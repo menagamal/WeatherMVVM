@@ -10,6 +10,7 @@ import UIKit
 
 class OverviewViewController: UIViewController ,OverviewViewProtocol{
    
+    @IBOutlet weak var tableFaviourte: UITableView!
     
      var coordinator: OverviewCoordinatorProtocol?
     
@@ -26,8 +27,7 @@ class OverviewViewController: UIViewController ,OverviewViewProtocol{
     }
     
     func presentDetailDialog() {
-           coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast())
-
+        coordinator?.presentDialogDetail(forecast: viewModel!.selectedForecast(), name: viewModel!.countryName)
     }
        
 }

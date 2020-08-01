@@ -11,10 +11,10 @@ import Foundation
 import UIKit
 
 class DetailBuilder {
-    func createModule(view: DetailsViewController,forecast: [List]) {
+    func createModule(view: DetailsViewController,forecast: [ListStruct],name:String) {
         
         let coordinator: DetailCoordinator = DetailCoordinator()
-        let viewModel: DetailViewModel = DetailViewModel(forecast: forecast)
+        let viewModel: DetailViewModel = DetailViewModel(forecast: forecast, name: name)
 
         viewModel.view = view
         coordinator.view = view

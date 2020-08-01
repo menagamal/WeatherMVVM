@@ -10,12 +10,13 @@ import Foundation
 
 class SearchViewModel: SearchViewModelProtocol {
     
-    
     var view: SearchViewProtocol?
     private var countries =  [CountryModel]()
     private var dataSource:SearchCellDataSource?
     private var service:WeatherSerivce?
-    private var selectedCountryForeCast  = [List]()
+    private var selectedCountryForeCast  = [ListStruct]()
+    var countryName: String = ""
+    
     init(countries:[CountryModel]) {
         self.countries = countries
         service = WeatherSerivce(delegate: self)
@@ -36,13 +37,14 @@ class SearchViewModel: SearchViewModelProtocol {
 
 extension SearchViewModel:SearchCellDataSourceDelegate{
     func didSelected(country: CountryModel) {
+        self.countryName = country.name!
         service?.searchWeather(with: country.name!)
     }
 }
 
 extension SearchViewModel:WeatherSerivceDelegate{
     
-    func forecastLoade(with list: [List]) {
+    func forecastLoade(with list: [ListStruct]) {
         self.selectedCountryForeCast.removeAll()
         for index in stride(from: 0, through: list.count - 2, by: 1) {
             if list[index].date!.calculateDiffInDays(date: list[index+1].date!) !=  0 {
@@ -60,7 +62,7 @@ extension SearchViewModel:WeatherSerivceDelegate{
         
     }
     
-    func selectedForecast() -> [List] {
+    func selectedForecast() -> [ListStruct] {
         return selectedCountryForeCast
     }
     

@@ -16,7 +16,7 @@ class ForecastView: UIView {
     
     func setDetails(date:String ,weather:Weather)  {
         labelDate.text = date
-        labelWeather.text = weather.description!
+        labelWeather.text = weather.descriptionStr
         //10d@2x.png
         if let icon = weather.icon {
             let urlStr = AppTargetConstant.baseImageUrl + icon + "@2x.png"

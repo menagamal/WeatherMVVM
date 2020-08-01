@@ -48,7 +48,7 @@ class WeatherSerivce {
 
 
 protocol WeatherSerivceDelegate {
-    func forecastLoade(with list:[List])
+    func forecastLoade(with list:[ListStruct])
     func invalidCityName()
     func somethingWentWrong(with message:String)
 }

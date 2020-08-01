@@ -21,11 +21,12 @@ protocol SearchViewModelProtocol: class {
     var view: SearchViewProtocol?  { get set }
     func searchCities(with city:String)
     func loadAllCountries()
-    func selectedForecast() -> [List]
+    func selectedForecast() -> [ListStruct]
+    var countryName:String {get set }
 }
 
 //MARK: Coordinator -
 protocol SearchCoordinatorProtocol: class {
     var view: UIViewController! { get set }
-    func presentDialogDetail(forecast:[List])
+    func presentDialogDetail(forecast: [ListStruct],name:String)
 }
