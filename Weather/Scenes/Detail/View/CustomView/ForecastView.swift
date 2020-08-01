@@ -18,12 +18,22 @@ class ForecastView: UIView {
         labelDate.text = date
         labelWeather.text = weather.descriptionStr
         //10d@2x.png
-        if let icon = weather.icon {
+        if !weather.base64.isEmpty {
+            let dataDecoded : Data = Data(base64Encoded: weather.base64, options: .ignoreUnknownCharacters)!
+            let decodedimage = UIImage(data: dataDecoded)
+            weatherImageView.image  = decodedimage
+        } else if let icon = weather.icon {
             let urlStr = AppTargetConstant.baseImageUrl + icon + "@2x.png"
             guard let url = URL(string: urlStr) else {
                 return
             }
-            weatherImageView.sd_setImage(with: url, completed: nil)
+            weatherImageView.sd_setImage(with: url) { (img, error, _, _) in
+                if error == nil {
+                    let imageData:Data = img!.pngData()!
+                    let strBase64:String = imageData.base64EncodedString(options: .lineLength64Characters)
+                    weather.base64 = strBase64
+                }
+            }
         }
     }
     
